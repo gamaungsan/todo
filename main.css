@@ -374,3 +374,80 @@ footer {
     display: flex;
     gap: 5px;
   }
+
+  .view-modal{
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 25%;
+    right: 35%;
+    padding: 30px;
+    display: grid;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+    text-wrap: wrap;
+    width: 280px;
+  }
+
+  .view-modal-button{
+    height: 25px;
+    width: 25px;
+    justify-self: end;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+
+  .view-modal-button:hover{
+    background-color: var(--selector);
+    cursor: pointer;
+  }
+
+  .title:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .view-modal input:not([type="radio"]){
+    font-family:Arial, Helvetica, sans-serif;
+    outline: none;
+    border: 1px;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+    background-color: var(--tertiary);
+
+  }
+
+  .view-modal input:first-child{
+    width: 200px;
+  }
+
+  .view-modal input[type="time"], .view-modal input[type="date"]{
+    width: 125px;
+  }
+
+  .edit-button{
+    height: 30px;
+    width: auto;
+    justify-self: center;
+    margin-top: 30px;
+  }
+
+  .edit-button:hover{
+    background-color: var(--selector);
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .change-lname{
+    display: none;
+  }
+
+  .change-list-name{
+    display: flex;
+  }
