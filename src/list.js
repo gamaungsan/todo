@@ -14,8 +14,6 @@ export default class ToDoList {
     }
 
     add(todo){
-        if(!(todo instanceof ToDo))
-            return false;
         
         this.#list.set(todo.id, todo);
         return true;    
@@ -25,35 +23,25 @@ export default class ToDoList {
         return this.#list.delete(id);
     }
 
-    editTitle(todo, newTitle){
-        if(!(todo instanceof ToDo))
-            return false;
+    editTitle(id, newTitle){
 
-        const toEdit = this.#list.get(todo.id);
+        const toEdit = this.#list.get(id);
         toEdit.setTitle = newTitle;
         return true;
     }
-    editDue(todo, newDue){
-        if(!(todo instanceof ToDo))
-            return false;
-
-        const toEdit = this.#list.get(todo.id);
+    editDue(id, newDue){
+        const toEdit = this.#list.get(id);
         toEdit.setDue = newDue;
         return true;
     }
-    editDescription(todo, newDescription){
-        if(!(todo instanceof ToDo))
-            return false;
+    editDescription(id, newDescription){
 
-        const toEdit = this.#list.get(todo.id);
+        const toEdit = this.#list.get(id);
         toEdit.setDescription = newDescription;
         return true;
     }
-    editPriority(todo, newPriority){
-        if(!(todo instanceof ToDo))
-            return false;
-
-        const toEdit = this.#list.get(todo.id);
+    editPriority(id, newPriority){
+        const toEdit = this.#list.get(id);
         toEdit.setPriority = newPriority;
         return true;
     }

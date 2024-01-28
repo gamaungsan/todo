@@ -41,15 +41,15 @@ export default class ToDo {
     }
 
     get getPriority(){
-        return this.due;
+        return this.priority;
     }
 
-    set setPriority(due){
-        this.due = due;
+    set setPriority(priority){
+        this.priority = priority;
     }
 
     complete(){
-        this.completed = !this.completed;
+        this.completed = true;
     }
 
     get completion(){
